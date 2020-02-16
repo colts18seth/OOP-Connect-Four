@@ -1,0 +1,58 @@
+h1 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+.head,
+.button {
+	display: flex;
+	justify-content: center;
+}
+
+input {
+	margin-left: 20px;
+}
+
+.button {
+	margin-top: 20px;
+}
+
+#game {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+/* game board table */
+#board td {
+	width: 50px;
+	height: 50px;
+	border: solid 1px #666;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+.piece {
+	margin: 5px;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	animation: 0.5s ease-in drop-piece;
+}
+
+/* column-top is table row of clickable areas for each column */
+#column-top td {
+	border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+	background-color: lightgray;
+}
+
+@keyframes drop-piece {
+	from {
+		margin-top: -75vh;
+	}
+	to {
+		margin-top: 0;
+	}
+}
